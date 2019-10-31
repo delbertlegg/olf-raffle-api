@@ -1,0 +1,29 @@
+spring:
+
+  main:
+    allow-bean-definition-overriding: true
+
+  datasource:
+    username: raffle
+    password: password
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/raffle
+
+  flyway:
+    password: password
+    user: raffle
+
+  jpa:
+    properties:
+      hibernate:
+        id:
+          new_generator_mappings: false
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+      properties.hibernate.temp.use_jdbc_metadata_defaults: false
+    generate-ddl: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    open-in-view: false
+    show-sql: false

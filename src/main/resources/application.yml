@@ -1,0 +1,22 @@
+spring:
+
+  main:
+    allow-bean-definition-overriding: true
+
+  datasource:
+    username: raffle
+    password: password
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/raffle
+
+  flyway:
+    password: password
+    user: raffle
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          filter:
+            CommonsRequestLoggingFilter: DEBUG
